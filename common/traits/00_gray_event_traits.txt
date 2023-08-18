@@ -1,0 +1,126 @@
+#特质升级
+leader_trait_gray_remove_governor = {
+	cost = 0 
+	councilor_trait = yes
+	inline_script = {
+		script = trait/ge_icon
+		CLASS = governor
+		ICON = "GFX_leader_trait_gray_remove"
+		RARITY = paragon
+		COUNCIL = yes
+		TIER = none
+	}
+	immortal_leaders = yes
+	modifier = {
+		planet_jobs_alloys_produces_mult = 0.3
+		planet_jobs_upkeep_mult = -0.4
+		planet_districts_upkeep_mult = -0.4
+		planet_buildings_upkeep_mult = -0.4
+	}
+
+	leader_class = { governor }
+	initial = no
+	randomized = no
+}
+
+leader_trait_gray_remove_scientist = {
+	cost = 0 
+	councilor_trait = yes
+	inline_script = {
+		script = trait/ge_icon
+		CLASS = scientist
+		ICON = "GFX_leader_trait_gray_remove"
+		RARITY = paragon
+		COUNCIL = yes
+		TIER = none
+	}
+	immortal_leaders = yes
+	modifier = {
+		planet_jobs_alloys_produces_mult = 0.3
+		all_technology_research_speed = 0.3
+		planet_jobs_upkeep_mult = -0.3
+		ships_upkeep_mult = -0.2
+	}
+
+	leader_class = { scientist }
+	initial = no
+	randomized = no
+}
+
+leader_trait_scientist_gray = {
+	cost = 0
+	inline_script = {
+		script = trait/icon_psionic
+		CLASS = scientist
+		ICON = "GFX_leader_trait_psionic_chosen_one"
+		RARITY = paragon
+		COUNCIL = no
+		TIER = none
+	}
+	immortal_leaders = yes
+	modifier = {
+		ship_speed_mult = 0.5
+		science_ship_survey_speed = 0.30
+		ship_archaeological_site_excavation_speed_mult = 0.3
+	}
+	triggered_self_modifier = {
+		potential = {
+			always = yes
+		}
+		leader_scientists_physics_research_produces_add = 70
+		leader_scientists_society_research_produces_add = 70
+		leader_scientists_engineering_research_produces_add = 70
+	}
+	
+	leader_class = { scientist }
+	initial = no
+	randomized = no
+}
+
+leader_trait_governor_gray = {
+	cost = 0
+	inline_script = {
+		script = trait/icon_psionic
+		CLASS = governor
+		ICON = "GFX_leader_trait_psionic_chosen_one"
+		RARITY = paragon
+		COUNCIL = no
+		TIER = none
+	}
+	immortal_leaders = yes
+	modifier = {
+		planet_buildings_cost_mult = -0.4
+		planet_building_build_speed_mult = 0.4
+		planet_jobs_energy_produces_mult = 0.15
+		planet_jobs_minerals_produces_mult = 0.15
+		deposit_blockers_cost_mult = -0.4
+		planet_clear_blocker_speed_mult = 0.4
+	}
+	
+	leader_class = { governor }
+	initial = no
+	randomized = no
+}
+
+leader_trait_gray_long_time = {
+	cost = 0
+	inline_script = {
+		script = trait/ge_icon
+		CLASS = leader
+		ICON = "GFX_leader_trait_gray_influenc"
+		RARITY = paragon
+		COUNCIL = no
+		TIER = none
+	}
+	immortal_leaders = yes
+	modifier = {
+		country_ruler_influence_produces_add = 5
+		diplo_weight_mult = 0.7
+		envoys_add = 1
+	}
+	
+	leader_class = { governor scientist }
+	initial = no
+	randomized = no
+	
+}

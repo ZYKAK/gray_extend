@@ -1,0 +1,28 @@
+portraits = {
+    GFX_gray_portrait = { texturefile = "gfx/models/portraits/gray_portrait.dds"}
+	GFX_gray_portrait_scientist = { texturefile = "gfx/models/portraits/gray_portrait_scientist.dds"}
+	GFX_gray_portrait_governor = { 
+		entity = "gray_portrait_entity"
+		clothes_selector = "no_texture"
+		hair_selector  =  "no_texture"
+		character_textures = {
+			"gfx/models/portraits/gray/grayportraits.dds"
+		}
+	}
+	GrayTempest06 = {
+		entity = "gray_portrait_entity"
+		clothes_selector = "no_texture"
+		hair_selector  =  "no_texture"
+		character_textures = {
+			"gfx/models/portraits/gray/grayportraits.dds"
+		}
+	}
+	GFX_gray_scientist_portrait = {
+		entity = "gray_scientist_portrait_entity"
+		clothes_selector = "no_texture"
+		hair_selector  =  "no_texture"
+		character_textures = {
+			"gfx/models/portraits/gray_scientist/grayportraits.dds"
+		}
+	}
+}

@@ -1,0 +1,8 @@
+objectTypes = {
+	pdxmesh = {
+		name = "gray_portrait_mesh"
+		file = "gfx/models/portraits/gray/gray_portrait_mesh_idle.mesh"
+		animation = { id = "idle"	type = "gray_portrait_anim_idle" }
+		scale = 1.0
+	}
+}

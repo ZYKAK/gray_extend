@@ -1,0 +1,29 @@
+gray_influence_up = {
+	trigger = {
+		FROM = {
+			has_country_flag = gray_come_long_time
+		}
+		is_country_type = default
+		OR = {
+			is_subject = no
+			AND = {
+				is_subject = yes
+				FROM = {
+					NOT = { is_overlord_to = PREV }
+				}
+				any_agreement = {
+					NOT = {
+						has_term_value = {
+							term = subject_diplomacy
+							value = subject_can_not_do_diplomacy
+						}
+					}
+				}
+			}
+		}
+	}
+
+	opinion = {
+		base = 120
+	}
+}	

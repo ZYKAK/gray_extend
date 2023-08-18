@@ -1,0 +1,16 @@
+special_project = {
+	key = "gravitational_information"
+	days_to_research = 560
+	timelimit = -1
+	picture = GFX_evt_frozen
+	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+	location = no
+
+	event_scope = country_event
+
+	on_success = {
+		owner = {
+			country_event = { id = grayevent.702 }
+		}
+	}
+}

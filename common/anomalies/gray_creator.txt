@@ -1,0 +1,38 @@
+gray_creator = {
+	desc = "gray_creator_desc"
+	picture = "GFX_evt_ship_in_orbit_2"
+	level = 3
+	max_once_global = yes 
+	should_ai_use = no
+
+	spawn_chance = {
+		modifier = {
+			add = 30
+		}
+		modifier = {
+			factor = 0
+			NOT = {is_same_value = event_target:gray_owner}
+		}
+	}
+
+
+	on_success = grayevent.799
+
+}
+
+
+disco_gray_cat = {
+	desc = "disco_gray_cat_desc"
+	picture = "GFX_evt_ship_in_orbit_2"
+	level = 3
+
+	spawn_chance = {
+		modifier = {
+			add = 6
+			is_planet_class = pc_gray_goo
+			solar_system = { has_star_flag = lcluster }
+		}
+	}
+
+	on_success = graygoo.400
+}

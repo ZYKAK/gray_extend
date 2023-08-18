@@ -1,0 +1,179 @@
+namespace = grayancient
+
+fleet_event = {
+	id = grayancient.1
+	title = "grayancient.1.name"
+	desc = "grayancient.1.desc"
+	picture = GFX_graygoo_archaeology1
+
+	show_sound = event_finding_loot
+	location = from
+
+	is_triggered_only = yes
+
+	archaeology = yes
+
+	trigger = {
+		exists = event_target:gray_owner
+	}
+		immediate = {
+			from = { set_site_progress_locked = yes }
+		}
+	
+		after = {
+			from = { set_site_progress_locked = no }
+		}
+	
+		option = {
+			name = grayancient.1.a
+		}
+		
+}
+
+fleet_event = {
+	id = grayancient.2
+	title = "grayancient.2.name"
+	desc = "grayancient.2.desc"
+	picture = GFX_graygoo_archaeology1
+
+	show_sound = event_finding_loot
+	location = from
+
+	is_triggered_only = yes
+
+	archaeology = yes
+
+	trigger = {
+		exists = event_target:gray_owner
+	}
+		immediate = {
+			from = { set_site_progress_locked = yes }
+		}
+	
+		after = {
+			from = { set_site_progress_locked = no }
+		}
+	
+		option = {
+			name = grayancient.2.a
+		}
+		
+}
+
+fleet_event = {
+	id = grayancient.3
+	title = "grayancient.3.name"
+	desc = "grayancient.3.desc"
+	picture = GFX_graygoo_archaeology1
+
+	show_sound = event_finding_loot
+	location = from
+
+	is_triggered_only = yes
+
+	archaeology = yes
+
+	trigger = {
+		exists = event_target:gray_owner
+	}
+		immediate = {
+			from = { set_site_progress_locked = yes }
+		}
+	
+		after = {
+			from = { set_site_progress_locked = no }
+		}
+	
+		option = {
+			name = grayancient.3.a
+		}
+		
+}
+
+fleet_event = {
+	id = grayancient.4
+	title = "grayancient.4.name"
+	desc = "grayancient.4.desc"
+	picture = GFX_graygoo_archaeology1
+
+	show_sound = event_finding_loot
+	location = from
+
+	is_triggered_only = yes
+
+	archaeology = yes
+
+	trigger = {
+		exists = event_target:gray_owner
+	}
+		immediate = {
+			from = { set_site_progress_locked = yes }
+		}
+	
+		after = {
+			from = { set_site_progress_locked = no }
+		}
+	
+		option = {
+			name = grayancient.4.a
+		}
+	
+}
+
+fleet_event = {
+	id = grayancient.5
+	title = "grayancient.5.name"
+	desc = "grayancient.5.desc"
+	picture = GFX_graygoo_archaeology1
+
+	show_sound = event_finding_loot
+	location = from
+	is_triggered_only = yes
+
+	archaeology = yes
+
+	trigger = {
+		exists = event_target:gray_owner
+	}
+
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = {
+		from = { set_site_progress_locked = no }
+	}
+
+	option = {
+		name = grayancient.5.a		
+		owner = {
+			country_event = {
+				id = grayancient.6 days = 15 random = 30
+			}
+		}
+	}
+}
+
+country_event = {
+	id = grayancient.6
+	title = "grayancient.6.name"
+	desc = "grayancient.6.desc"
+	picture = GFX_evt_resource_cache
+	is_triggered_only = yes
+	event_window_type = leader_story
+	event_picture_background = "GFX_leader_recruitment_bg_renowned"
+
+	picture_event_data = {
+		portrait = event_target:gray_scientist
+	}
+	
+	option = {
+		name = grayancient.6.a
+		default_hide_option = yes
+		hidden_effect = {
+			country_event = { 
+				id = grayevent.600
+			}
+		}
+	}
+}

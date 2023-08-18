@@ -1,0 +1,20 @@
+on_custom_diplomacy = {
+	events = {
+		grayevent.800
+		grayevent.801
+		grayevent.802
+		grayevent.803
+		grayevent.804
+
+	}
+}
+on_entering_system_first_time = {
+	events = {
+		grayevent.700
+	}
+}
+
+#on_monthly_pulse = {
+#	events = {
+#	}
+#}
