@@ -5,6 +5,7 @@ I need a translator
 A MOD that expands Gray Wind
 This mod focuses on adding content about Gray Wind
 Such as events, ships, portraits, technology.
+only have chinese
 English is not my mother tongue, some parts are machine-translated, if you have any questions, please ask
 
 Current mod extension content:
