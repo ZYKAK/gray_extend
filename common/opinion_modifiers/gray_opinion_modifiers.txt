@@ -3,7 +3,7 @@ gray_influence_up = {
 		FROM = {
 			has_country_flag = gray_come_long_time
 		}
-		is_country_type = default
+
 		OR = {
 			is_subject = no
 			AND = {

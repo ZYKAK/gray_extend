@@ -1,0 +1,32 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_graygoo_archaeology"
+		texturefile = "gfx/event_pictures/graygoo_archaeology.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_graygoo_archaeology1"
+		texturefile = "gfx/event_pictures/graygoo_archaeology1.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_graygoo_scientist"
+		texturefile = "gfx/event_pictures/graygoo_scientist.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_graygoo_remove"
+		texturefile = "gfx/event_pictures/graygoo_remove.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_graygoo_remove1"
+		texturefile = "gfx/event_pictures/graygoo_remove1.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+}

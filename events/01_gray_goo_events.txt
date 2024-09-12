@@ -239,11 +239,13 @@ country_event = {
 				days = 1800
 				random = 1800
 			}
-		}
-		#灰风科学家+勘探事件
-		hidden_effect = {
+			#灰风科学家+勘探事件
 			country_event = {
 				id = grayevent.701
+			}
+			country_event = {
+				id = grayevent.5
+				days = 15
 			}
 		}
 	}
@@ -280,7 +282,7 @@ country_event = {
 		last_created_country = {
 			establish_communications_no_message = root
 			create_leader = {
-				class = governor
+				class = official
 				species = root
 				name = NAME_Gray
 				event_leader = yes
@@ -288,9 +290,9 @@ country_event = {
 				set_age = 0
 				traits = {
 					trait = leader_trait_governor_gray
-					trait = subclass_governor_economist
-					trait = leader_trait_urbanist_3
-					trait = leader_trait_scrapper_2
+					trait = subclass_official_governor
+					trait = trait_ruler_architectural_sense_3
+					trait = leader_trait_distribution_lines_2
 				}
 			}
 			set_leader = last_created_leader
@@ -770,7 +772,7 @@ event = {
 					NOT = { exists = event_target:gray_governor }
 				}
 				AND = {
-					has_country_flag = gray_scitntist_active
+					has_country_flag = gray_scientist_active
 					NOT = { exists = event_target:gray_scientist }
 				}
 			}

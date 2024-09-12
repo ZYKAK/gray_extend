@@ -397,7 +397,7 @@ create_graygoo_roamers_7 = {
 create_dessanu_roamers_1 = {
 	event_target:graygoo_country = {
 		create_leader = {
-			class = admiral
+			class = commander
 			species = owner_main_species
 			name = random
 			skill = 3
@@ -463,7 +463,7 @@ create_dessanu_roamers_1 = {
 create_dessanu_roamers_2 = {
 	event_target:graygoo_country = {
 		create_leader = {
-			class = admiral
+			class = commander
 			species = owner_main_species
 			name = random
 			skill = 3
@@ -529,7 +529,7 @@ create_dessanu_roamers_2 = {
 create_dessanu_roamers_3 = {
 	event_target:graygoo_country = {
 		create_leader = {
-			class = admiral
+			class = commander
 			species = owner_main_species
 			name = random
 			skill = 3
@@ -595,7 +595,7 @@ create_dessanu_roamers_3 = {
 create_dessanu_roamers_4 = {
 	event_target:graygoo_country = {
 		create_leader = {
-			class = admiral
+			class = commander
 			species = owner_main_species
 			name = random
 			skill = 3
@@ -661,7 +661,7 @@ create_dessanu_roamers_4 = {
 create_dessanu_roamers_5 = {
 	event_target:graygoo_country = {
 		create_leader = {
-			class = admiral
+			class = commander
 			species = owner_main_species
 			name = random
 			skill = 3
@@ -727,7 +727,7 @@ create_dessanu_roamers_5 = {
 create_dessanu_roamers_6 = {
 	event_target:graygoo_country = {
 		create_leader = {
-			class = admiral
+			class = commander
 			species = owner_main_species
 			name = random
 			skill = 3
@@ -793,7 +793,7 @@ create_dessanu_roamers_6 = {
 create_dessanu_roamers_7 = {
 	event_target:graygoo_country = {
 		create_leader = {
-			class = admiral
+			class = commander
 			species = owner_main_species
 			name = random
 			skill = 3
@@ -880,6 +880,13 @@ create_gray_governor = {
 		}
 	}
 	if = {
+		limit = { has_country_flag = gray_governor_active }
+		remove_country_flag = gray_governor_active
+		event_target:gray_governor = {
+			kill_leader = { show_notification = no }
+		}
+	}
+	if = {
 		limit = { has_country_flag = gray_warship_active }
 		remove_country_flag = gray_warship_active
 		event_target:gray_warship = { delete_fleet = this }
@@ -900,7 +907,7 @@ create_gray_governor = {
 			NOT = {has_country_flag = gray_come_long_time}
 		}
 		create_leader = {
-			class = governor
+			class = official
 			species = root
 			name = NAME_Gray
 			event_leader = yes
@@ -914,24 +921,24 @@ create_gray_governor = {
 			hide_age = yes
 			traits = {
 				trait = leader_trait_governor_gray
-				trait = subclass_governor_economist
-				trait = leader_trait_urbanist_3
-				trait = leader_trait_scrapper_2
+				trait = subclass_official_governor
+				trait = trait_ruler_architectural_sense_3
+				trait = leader_trait_distribution_lines_2
 			}
 			effect = {
 				set_leader_flag = legendary_leader
 				set_leader_flag = immune_to_negative_traits
+				set_leader_flag = gray_leader
 			}
 		}
 	}else_if = {
 		limit = {
-			NOT = {
-				has_country_flag = gray_come_long_time
-			}
+			is_gestalt = no
+			NOT = { has_country_flag = gray_come_long_time }
 			has_country_flag = leader_governor_gray_remove
 	    } 
 		create_leader = {
-			class = governor
+			class = official
 			species = root
 			name = NAME_Gray
 			event_leader = yes
@@ -946,25 +953,25 @@ create_gray_governor = {
 			traits = {
 				trait = leader_trait_gray_remove_governor
 				trait = leader_trait_governor_gray
-				trait = subclass_governor_economist
-				trait = leader_trait_urbanist_3
-				trait = leader_trait_scrapper_2
+				trait = subclass_official_governor
+				trait = trait_ruler_architectural_sense_3
+				trait = leader_trait_distribution_lines_2
 			}
 			effect = {
 				set_leader_flag = legendary_leader
 				set_leader_flag = immune_to_negative_traits
+				set_leader_flag = gray_leader
 			}
 		}
     }else_if = {
 		limit = {
-			NOT = {
-				has_country_flag = leader_governor_gray_remove
-	        } 
+			NOT = { has_country_flag = leader_governor_gray_remove } 
 			has_country_flag = gray_come_long_time
+			is_gestalt = no
 		}
  
 		create_leader = {
-			class = governor
+			class = official
 			species = root
 			name = NAME_Gray
 			event_leader = yes
@@ -979,22 +986,24 @@ create_gray_governor = {
 			traits = {
 				trait = leader_trait_gray_long_time
 				trait = leader_trait_governor_gray
-				trait = subclass_governor_economist
-				trait = leader_trait_urbanist_3
-				trait = leader_trait_scrapper_2
+				trait = subclass_official_governor
+				trait = trait_ruler_architectural_sense_3
+				trait = leader_trait_distribution_lines_2
 			}
 			effect = {
 				set_leader_flag = legendary_leader
 				set_leader_flag = immune_to_negative_traits
+				set_leader_flag = gray_leader
 			}
 		}
 	}else_if = {
 			limit = {
 				has_country_flag = leader_governor_gray_remove
 				has_country_flag = gray_come_long_time
+				is_gestalt = no
 			} 
 			create_leader = {
-				class = governor
+				class = official
 				species = root
 				name = NAME_Gray
 				event_leader = yes
@@ -1010,13 +1019,108 @@ create_gray_governor = {
 					trait = leader_trait_gray_remove_governor
 					trait = leader_trait_gray_long_time
 					trait = leader_trait_governor_gray
-					trait = subclass_governor_economist
-					trait = leader_trait_urbanist_3
-					trait = leader_trait_scrapper_2
+				    trait = subclass_official_governor
+				    trait = trait_ruler_architectural_sense_3
+				    trait = leader_trait_distribution_lines_2
 				}
 				effect = {
 					set_leader_flag = legendary_leader
 					set_leader_flag = immune_to_negative_traits
+				    set_leader_flag = gray_leader
+				}
+		    }
+		}else_if = {
+			limit = {
+				NOT = { has_country_flag = leader_governor_gray_remove } 
+				has_country_flag = gray_come_long_time
+				is_gestalt = yes
+			}
+	 
+			create_leader = {
+				class = official
+				species = root
+				name = NAME_Gray
+				event_leader = yes
+				skill = 10
+				set_age = 0
+				skip_background_generation = yes
+				custom_catch_phrase = gray_catch_phrase
+				custom_description = gray_backstory
+				background_ethic = ethic_gestalt_consciousness
+				gender = indeterminable
+				hide_age = yes
+				traits = {
+					trait = leader_trait_governor_gray
+					trait = subclass_official_governor
+					trait = trait_ruler_architectural_sense_3
+					trait = leader_trait_distribution_lines_2
+				}
+				effect = {
+					set_leader_flag = legendary_leader
+					set_leader_flag = immune_to_negative_traits
+					set_leader_flag = gray_leader
+				}
+			}
+		}else_if = {
+			limit = {
+				is_gestalt = no
+				NOT = { has_country_flag = gray_come_long_time }
+				has_country_flag = leader_governor_gray_remove
+			} 
+			create_leader = {
+				class = official
+				species = root
+				name = NAME_Gray
+				event_leader = yes
+				skill = 10
+				set_age = 0
+				skip_background_generation = yes
+				custom_catch_phrase = gray_catch_phrase
+				custom_description = gray_backstory
+				background_ethic = ethic_gestalt_consciousness
+				gender = indeterminable
+				hide_age = yes
+				traits = {
+					trait = leader_trait_governor_gray
+					trait = subclass_official_governor
+					trait = trait_ruler_architectural_sense_3
+					trait = leader_trait_distribution_lines_2
+				}
+				effect = {
+					set_leader_flag = legendary_leader
+					set_leader_flag = immune_to_negative_traits
+					set_leader_flag = gray_leader
+				}
+			}
+		}else_if = {
+			limit = {
+				has_country_flag = leader_governor_gray_remove
+				has_country_flag = gray_come_long_time
+				is_gestalt = no
+			} 
+			create_leader = {
+				class = official
+				species = root
+				name = NAME_Gray
+				event_leader = yes
+				skill = 10
+				set_age = 0
+				skip_background_generation = yes
+				custom_catch_phrase = gray_catch_phrase
+				custom_description = gray_backstory
+				background_ethic = ethic_gestalt_consciousness
+				gender = indeterminable
+				hide_age = yes
+				traits = {
+					trait = leader_trait_governor_gray
+				    trait = subclass_official_governor
+				    trait = trait_ruler_architectural_sense_3
+				    trait = leader_trait_distribution_lines_2
+				}
+				effect = {
+					set_leader_flag = legendary_leader
+					set_leader_flag = immune_to_negative_traits
+					set_leader_flag = gray_leader
 				}
 		    }
 		}
@@ -1173,6 +1277,13 @@ create_gray_scientist = {
 			kill_leader = { show_notification = no }
 		}
 	}
+	if = {
+		limit = { has_country_flag = gray_scientist_active }
+		remove_country_flag = gray_scientist_active
+		event_target:gray_scientist = {
+			kill_leader = { show_notification = no }
+		}
+	}
 	set_country_flag = gray_scientist_active
 	#判断是否进化
 	if = {
@@ -1197,21 +1308,21 @@ create_gray_scientist = {
 			hide_age = yes
 			traits = {
 				trait = leader_trait_scientist_gray
-				trait = subclass_governor_economist
-				trait = leader_trait_urbanist_3
-				trait = leader_trait_scrapper_2
+				trait = subclass_official_governor
+				trait = trait_ruler_architectural_sense_3
+				trait = leader_trait_distribution_lines_2
 			}
 			effect = {
 				set_leader_flag = legendary_leader
 				set_leader_flag = immune_to_negative_traits
+				set_leader_flag = gray_leader
 			}
 		}
 	}else_if = {
 		limit = {
-			NOT = {
-				has_country_flag = gray_come_long_time
-			}
+			NOT = { has_country_flag = gray_come_long_time }
 			has_country_flag = leader_governor_gray_remove
+			is_gestalt = no
 	    } 
 		create_leader = {
 			class = scientist
@@ -1229,21 +1340,21 @@ create_gray_scientist = {
 			traits = {
 				trait = leader_trait_gray_remove_scientist
 				trait = leader_trait_scientist_gray
-				trait = subclass_governor_economist
-				trait = leader_trait_urbanist_3
-				trait = leader_trait_scrapper_2
+				trait = subclass_official_governor
+				trait = trait_ruler_architectural_sense_3
+				trait = leader_trait_distribution_lines_2
 			}
 			effect = {
 				set_leader_flag = legendary_leader
 				set_leader_flag = immune_to_negative_traits
+				set_leader_flag = gray_leader
 			}
 		}
     }else_if = {
 		limit = {
 			has_country_flag = gray_come_long_time
-			NOT = {
-				has_country_flag = leader_governor_gray_remove
-	        } 
+			NOT = { has_country_flag = leader_governor_gray_remove }
+			is_gestalt = no 
 		}
 	 
 		create_leader = {
@@ -1262,19 +1373,21 @@ create_gray_scientist = {
 			traits = {
 				trait = leader_trait_gray_long_time
 				trait = leader_trait_scientist_gray
-				trait = subclass_governor_economist
-				trait = leader_trait_urbanist_3
-				trait = leader_trait_scrapper_2
+				trait = subclass_official_governor
+				trait = trait_ruler_architectural_sense_3
+				trait = leader_trait_distribution_lines_2
 			}
 			effect = {
 				set_leader_flag = legendary_leader
 				set_leader_flag = immune_to_negative_traits
+				set_leader_flag = gray_leader
 			}
 		}
 	}else_if = {
 		limit = {
 			has_country_flag = leader_governor_gray_remove
 			has_country_flag = gray_come_long_time
+			is_gestalt = no
 		} 
 		create_leader = {
 			class = scientist
@@ -1293,13 +1406,108 @@ create_gray_scientist = {
 				trait = leader_trait_gray_remove_scientist
 				trait = leader_trait_gray_long_time
 				trait = leader_trait_scientist_gray
-				trait = subclass_governor_economist
-				trait = leader_trait_urbanist_3
-				trait = leader_trait_scrapper_2
+				trait = subclass_official_governor
+				trait = trait_ruler_architectural_sense_3
+				trait = leader_trait_distribution_lines_2
 			}
 			effect = {
 				set_leader_flag = legendary_leader
 				set_leader_flag = immune_to_negative_traits
+				set_leader_flag = gray_leader
+			}
+		}
+	}else_if = {
+		limit = {
+			NOT = { has_country_flag = gray_come_long_time }
+			has_country_flag = leader_governor_gray_remove
+			is_gestalt = yes
+	    } 
+		create_leader = {
+			class = scientist
+			species = root
+			name = NAME_Gray
+			event_leader = yes
+			skill = 10
+			set_age = 0
+			skip_background_generation = yes
+			custom_catch_phrase = gray_catch_phrase
+			custom_description = gray_backstory
+			background_ethic = ethic_gestalt_consciousness
+			gender = indeterminable
+			hide_age = yes
+			traits = {
+				trait = leader_trait_scientist_gray
+				trait = subclass_official_governor
+				trait = trait_ruler_architectural_sense_3
+				trait = leader_trait_distribution_lines_2
+			}
+			effect = {
+				set_leader_flag = legendary_leader
+				set_leader_flag = immune_to_negative_traits
+				set_leader_flag = gray_leader
+			}
+		}
+    }else_if = {
+		limit = {
+			has_country_flag = gray_come_long_time
+			NOT = { has_country_flag = leader_governor_gray_remove }
+			is_gestalt = yes 
+		}
+	 
+		create_leader = {
+			class = scientist
+			species = root
+			name = NAME_Gray
+			event_leader = yes
+			skill = 10
+			set_age = 0
+			skip_background_generation = yes
+			custom_catch_phrase = gray_catch_phrase
+			custom_description = gray_backstory
+			background_ethic = ethic_gestalt_consciousness
+			gender = indeterminable
+			hide_age = yes
+			traits = {
+				trait = leader_trait_scientist_gray
+				trait = subclass_official_governor
+				trait = trait_ruler_architectural_sense_3
+				trait = leader_trait_distribution_lines_2
+			}
+			effect = {
+				set_leader_flag = legendary_leader
+				set_leader_flag = immune_to_negative_traits
+				set_leader_flag = gray_leader
+			}
+		}
+	}else_if = {
+		limit = {
+			has_country_flag = leader_governor_gray_remove
+			has_country_flag = gray_come_long_time
+			is_gestalt = yes
+		} 
+		create_leader = {
+			class = scientist
+			species = root
+			name = NAME_Gray
+			event_leader = yes
+			skill = 10
+			set_age = 0
+			skip_background_generation = yes
+			custom_catch_phrase = gray_catch_phrase
+			custom_description = gray_backstory
+			background_ethic = ethic_gestalt_consciousness
+			gender = indeterminable
+			hide_age = yes
+			traits = {
+				trait = leader_trait_scientist_gray
+				trait = subclass_official_governor
+				trait = trait_ruler_architectural_sense_3
+				trait = leader_trait_distribution_lines_2
+			}
+			effect = {
+				set_leader_flag = legendary_leader
+				set_leader_flag = immune_to_negative_traits
+				set_leader_flag = gray_leader
 			}
 		}
 	}
