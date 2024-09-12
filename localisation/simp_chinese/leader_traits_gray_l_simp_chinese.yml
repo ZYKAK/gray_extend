@@ -5,28 +5,40 @@ leader_trait_gray_remove_governor_desc:0 "经过升级后，灰风处理信息�
 leader_trait_gray_remove_scientist:0 "创造者的灵感"
 leader_trait_gray_remove_scientist_desc:0 "通过古代文明留下的纳米机器人研究记录，让我们对灰风进行了升级。通过升级后的灰风有了许多有趣的点子。"
 
+leader_trait_gray_remove_gestalt:0 "纳米思维融合"
+leader_trait_gray_remove_gestalt_desc:0 "在灰风提升后，她也加入了我们的意识网络，她的经历、经验和思维得到了一定程度上的共享。对我们整体有所提升。"
+
 leader_trait_scientist_gray:0 "纳米机器个体"
 leader_trait_scientist_gray_desc:0 "小灰本质上是由不计其数的先进纳米机器组成的密集个体。"
 
 leader_trait_gray_long_time:0 "巨大的影响"
 leader_trait_gray_long_time_desc:0 "由于灰风的到来，对我们，甚至整个星海有很大的影响。"
 
+Gray_Doppelganger:0 "灰风终端"
+
 grayevent.2.name:0 "更换肖像"
-grayevent.2.desc:0 "请问这样好看吗"
-grayevent.2.b:0 "可以哦"
+grayevent.2.desc:0 "请问这样好看吗。"
+grayevent.2.b:0 "可以哦。"
 
-grayevent.602.name:0 "引领未来"
-grayevent.602.desc:0 "当我们接纳灰风作为我们的一员后，她开始积极参与星际探索和外交事务。她以其独特的视角和对过去星际文明的了解，为我们带来了许多宝贵的见解和建议。她的存在和背景使她成为地球联合国与其他星际文明进行交流和合作的重要纽带。随着时间的推移，灰风在帝国中赢得了人们的尊重和信任。她成为了一位引领着人类向着更广阔星际未来迈进的重要人物。"
-grayevent.602.a:0 "真厉害。"
-
-grayevent.601.name:0 "觉醒计划（一）"
-grayevent.601.desc:0 "开始进行觉醒计划后，通过我们对那座地下设施获得的研究资料，开始对灰风进行升级。升级进行的很成功，灰风得到了增强。计划的初步阶段完成验证了这个计划的可能性，继续进行会对我们有很大帮助。"
-grayevent.601.a:0 "计划很成功"
-grayevent.601.b:0 "真不错。"
+grayevent.5.name:0 "意识接入"
+grayevent.5.desc:0 "灰风的纳米机器意识与我们的意识形态很相似，通过研究和她的描述，我们可以将她也一起接入我们的网络节点。由于她的思维处理器非常先进，经过时间的流逝而产生自我。这可以让她作为我们的处理终端。"
+grayevent.5.a:0 "开始接入融合"
+grayevent.5.b:0 "外来的意识接入？算了。"
 
 grayevent.600.name:0 "觉醒计划"
 grayevent.600.desc:0 "在探索了古代帝国的科技遗产后，我们对纳米机器人有了更加深刻的了解。尤其是对灰风有了极大的帮助，这些科技技术和文献可以让灰风拥有更加强大的力量。与灰风商讨后，提出了一个计划——“觉醒计划”。这个计划将通过这些遗留的研究、记录，对灰风进行进一步升级。这个计划所需要的时间和资源会随着我们对这个古代文明的探索而增加。"
 grayevent.600.a:0 "那就上吧！"
+
+grayevent.601.name:0 "觉醒计划（一）"
+grayevent.601.desc:0 "开始进行觉醒计划后，通过我们对那座地下设施获得的研究资料，开始对灰风进行升级。升级进行的很成功，灰风得到了增强。计划的初步阶段完成验证了这个计划的可能性，继续进行会对我们有很大帮助。"
+grayevent.601.a:0 "计划很成功。"
+grayevent.601.b:0 "真不错。"
+grayevent.601.c:0 "接入节点。"
+
+grayevent.602.name:0 "引领未来"
+grayevent.602.desc:0 "当我们接纳灰风作为我们的一员后，她开始积极参与星际探索和外交事务。她以其独特的视角和对过去星际文明的了解，为我们带来了许多宝贵的见解和建议。她的存在和背景使她成为我们与其他星际文明进行交流和合作的重要纽带。随着时间的推移，灰风在帝国中赢得了人们的尊重和信任。她成为了一位引领着我们向着更广阔星际未来迈进的重要人物。"
+grayevent.602.a:0 "真厉害。"
+grayevent.602.b:0 "载入意识网络。"
 
 grayevent.700.name:0 "诡异的引力波"
 grayevent.700.desc:0 "我们刚要穿过L-星门就检测到了来自对面诡异的引力波信号，但是它并不会影响我们的航行与探索。就好像是有人为了某种目而得意的在控制的一样"
@@ -94,6 +106,8 @@ grayevent.804.d.desc:0 "谁能想到，在实验室里瞎想都能获得如此�
 need_gray:0 "该遗址需要专业人士才能发掘"
 
 gravitational_information:0 "破解讯息"
-gravitational_information_desc:0 "我们发现了一段藏在引力里的讯息，它好像在向我们描述一个坐标。"
+gravitational_information_DESC:0 "我们发现了一段藏在引力里的讯息，它好像在向我们描述一个坐标。"
 
 gray_long_time:1 "所有国家的£opinion£§Y评价§!提升§G+120§!"
+
+gray_influence_up:0 "灰风的影响"

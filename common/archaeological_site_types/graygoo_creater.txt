@@ -1,15 +1,16 @@
 fort_ruins = {
-	desc = fort_ruins_desc
+	desc = "fort_ruins_desc"
 	picture = GFX_evt_city_ruins
-	stages = 5
+	stages = 4
 	weight = 0
 	allow = {
 		custom_tooltip = {
 			fail_text = need_gray
-			is_ship_class = shipclass_science_ship
-			exists = leader
-			leader = { has_trait = leader_trait_scientist_gray }
-		}
+		}	
+		is_ship_class = shipclass_science_ship	
+		leader = { has_trait = leader_trait_scientist_gray }
+		leader = { leader_class = scientist }	
+		exists = leader
 	}
 	visible = {
 		default_site_visible_trigger = yes

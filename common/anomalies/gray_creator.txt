@@ -14,10 +14,7 @@ gray_creator = {
 			NOT = {is_same_value = event_target:gray_owner}
 		}
 	}
-
-
 	on_success = grayevent.799
-
 }
 
 
@@ -31,6 +28,9 @@ disco_gray_cat = {
 			add = 6
 			is_planet_class = pc_gray_goo
 			solar_system = { has_star_flag = lcluster }
+			NOT = {
+				is_same_value = event_target:gray_owner
+			}
 		}
 	}
 

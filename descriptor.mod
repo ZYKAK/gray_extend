@@ -1,8 +1,8 @@
-version="1.0.4"
+version="1.0.5"
 tags={
 	"Leaders"
 }
 picture="grayextend.png"
 name="grayextend"
-supported_version="3.8.4"
+supported_version="v3.13.0"
 remote_file_id="3017873059"

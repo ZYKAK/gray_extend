@@ -8,7 +8,6 @@ namespace = grayevent
 country_event = {
 	id = grayevent.1
 	title = "grayevent.1.name"
-	picture = not
 	is_triggered_only = yes
 
 	option = {
@@ -137,6 +136,43 @@ country_event = {
 	}
 }
 
+country_event = {
+	id = grayevent.5
+	title = "grayevent.5.name"
+	desc = "grayevent.5.desc"
+	is_triggered_only = yes
+	picture = GFX_evt_generator_powerup
+
+	trigger = {
+		is_gestalt = yes
+		is_machine_empire = yes
+	}
+
+	option = {
+		name = grayevent.5.a
+		default_hide_option = yes
+		leader = {
+			leader_event = { id = grayevent.6 }
+			change_leader_portrait = GFX_gray_portrait_governor
+		}
+	}
+
+	option = {
+		name = grayevent.5.b
+		default_hide_option = yes
+	}
+}
+
+leader_event = {
+	id = grayevent.6
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		set_name = "Gray_Doppelganger"
+	}
+
+}
+
 #灰风升级事件
 country_event = {
 	id = grayevent.600
@@ -175,24 +211,70 @@ country_event = {
 	immediate = {
 		set_country_flag = leader_governor_gray_remove
 	}
-
 	option = {
 		name = grayevent.601.a
+		trigger = {
+			is_homicidal = no
+			is_gestalt = no
+		}
 		default_hide_option = yes
-		hidden_effect = {
-			event_target:gray_scientist = {
-				add_trait = leader_trait_gray_remove_scientist
+		if = {
+			limit = { 
+				exists = event_target:gray_governor
+			}
+			hidden_effect = {
+				event_target:gray_governor = {
+					add_trait = leader_trait_gray_remove_governor
 				}
+			}
+		}else_if = {
+			limit = {
+				exists = event_target:gray_scientist
+			}
+			hidden_effect = {
+				event_target:gray_scientist = {
+					add_trait = leader_trait_gray_remove_scientist
+				}
+			}
 		}
 	}
-
 	option = {
 		name = grayevent.601.b
+		trigger = {
+			is_homicidal = no
+			is_gestalt = no
+		}
+		default_hide_option = yes
+		if = {
+			limit = { 
+				exists = event_target:gray_governor
+			}
+			hidden_effect = {
+				event_target:gray_governor = {
+					add_trait = leader_trait_gray_remove_governor
+				}
+			}
+		}else_if = {
+			limit = {
+				exists = event_target:gray_scientist
+			}
+			hidden_effect = {
+				event_target:gray_scientist = {
+					add_trait = leader_trait_gray_remove_scientist
+				}
+			}
+		}
+	}
+	option = {
+		name = grayevent.601.c
+		trigger = {
+			is_gestalt = yes
+		}
 		default_hide_option = yes
 		hidden_effect = {
-			event_target:gray_scientist = {
-				add_trait = leader_trait_gray_remove_scientist
-				}
+			leader = {
+				add_trait = leader_trait_gray_remove_gestalt
+			}
 		}
 	}
 }
@@ -213,12 +295,28 @@ country_event = {
 	
 	option = {
 		name = grayevent.602.a
+		trigger = {
+			is_homicidal = no
+			is_gestalt = no
+		}
 		default_hide_option = yes
 		hidden_effect = {
 			event_target:gray_scientist = {
 				add_trait = leader_trait_gray_long_time
 			}
 			event_target:gray_governor = {
+				add_trait = leader_trait_gray_long_time
+			}
+		}
+	}
+	option = {
+		name = grayevent.602.b
+		trigger = {
+			is_gestalt = yes
+		}
+		default_hide_option = yes
+		hidden_effect = {
+			leader = {
 				add_trait = leader_trait_gray_long_time
 			}
 		}
@@ -354,7 +452,7 @@ country_event = {
 	}
 }
 
-country_event = {
+ship_event = {
 	id = grayevent.799
 	title = "grayevent.799.name"
 	desc = "grayevent.799.desc"
@@ -367,13 +465,12 @@ country_event = {
 
 	option = {
 		name = grayevent.799.a
-		add_monthly_resource_mult = {
-			resource = nanites
-			value = 100000
-		}
-		add_monthly_resource_mult = {
-			resource = minor_artifacts
-			value = 3000
+		hidden_effect = {
+			owner = {
+			    country_event = {
+			        id = grayevent.798
+			    }
+		   }
 		}
 	}
 #获得纳米战舰科技
@@ -385,6 +482,22 @@ country_event = {
 #		}
 #
 #	}
+}
+
+country_event = {
+	id = grayevent.798
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		add_monthly_resource_mult = {
+			resource = nanites
+			value = 100000
+		}
+		add_monthly_resource_mult = {
+			resource = minor_artifacts
+			value = 3000
+		}
+	}
 }
 
 # Main Menu (Initial)
