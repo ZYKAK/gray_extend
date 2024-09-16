@@ -173,6 +173,20 @@ leader_event = {
 
 }
 
+#mod启用标识-开局执行
+country_event = {
+	id = grayevent.7
+	hide_window = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+	trigger = {
+		is_ai = no
+	}
+	immediate = {
+		set_global_flag = has_grayextend_mod
+	}
+}
+
 #灰风升级事件
 country_event = {
 	id = grayevent.600
