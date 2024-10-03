@@ -1063,7 +1063,7 @@ country_event = {
 
 	option = { # Governor
 		name = graygoo.500.a
-		response_text = graygoo.501.c.response
+		response_text = graygoo.502.a.response
 		allow = {
 			hidden_trigger = { exists = event_target:gray_scientist }
 		}
